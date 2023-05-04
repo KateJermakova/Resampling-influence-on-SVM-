@@ -19,3 +19,7 @@ In order to examine model behavior in the settings with and without class imbala
 
 To improve the performance of the models and reduce the dimensionality of the dataset, feature selection was performed using sequential forward selection (SFS). SFS is a greedy search algorithm appropriate for high-dimensional feature spaces that starts with an empty set of features and iteratively adds one feature at a time based on its correlation with the target variable. To avoid multicollinearity and strike a balance between computational efficiency and performance, the feature set was reduced to 3 elements: “texture_worst”, “concave_points_worst” and “radius_worst”. In determining the feature space, the performance of the feature set was compared between both the downsampled and original training sets, yielding identical accuracy of 71% on the generalized linear regression model.
 
+
+Along with the SVM model, the kernel function was used. The kernel trick makes the model more powerful, expanding the features into a high dimensional space. For this mode, the linear kernel was chosen due to better performance scores, as showcased in Figure 4. The RBF kernel was overfitting the model (Figure 3) and showed lower performance scores, despite changing hyperparameter γ to different values.
+
+![image](https://user-images.githubusercontent.com/132377563/236200401-4c01d5a3-1b5b-4473-9ec9-29e4110e5f8a.png)
